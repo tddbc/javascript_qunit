@@ -1,7 +1,7 @@
-module("QUnit の使い方");
+QUnit.module("QUnit の使い方");
 
 
-test( "assert.ok の使い方", function(assert) {
+QUnit.test( "assert.ok の使い方", function(assert) {
   var truth = true;
   assert.ok(truth, "assert.ok は引数が truthy であるかどうかを検証します");
 
@@ -12,20 +12,20 @@ test( "assert.ok の使い方", function(assert) {
 
 // QUnit の assert.equal 系は引数の順番が actual, expected の順(JUnit の逆)なので注意してください
 
-test( "equal, notEqual の使い方", function(assert) {
+QUnit.test( "equal, notEqual の使い方", function(assert) {
   assert.equal('hoge', 'hoge');
   assert.equal(1, '1', 'equal は == を使います');
   assert.notEqual('foo', 'bar');
 });
 
 
-test( "strictEqual, notStrictEqual の使い方", function(assert) {
+QUnit.test( "strictEqual, notStrictEqual の使い方", function(assert) {
   assert.strictEqual('1', '1');
   assert.notStrictEqual(1, '1', 'strictEqual は === を使います');
 });
 
 
-test( "deepEqual, notDeepEqual の使い方", function(assert) {
+QUnit.test( "deepEqual, notDeepEqual の使い方", function(assert) {
   var ary = ['foo', 'bar'];
   assert.deepEqual(ary.map(function(str){return str.toUpperCase();}), ['FOO', 'BAR'], 'Array の比較を行えます');
 
@@ -38,7 +38,7 @@ test( "deepEqual, notDeepEqual の使い方", function(assert) {
 });
 
 
-test( "例外のテストの書き方", function(assert) {
+QUnit.test( "例外のテストの書き方", function(assert) {
   assert.throws(function () {
       throw new Error('例外');
   }, 'throws で例外が投げられることをテストできます');
