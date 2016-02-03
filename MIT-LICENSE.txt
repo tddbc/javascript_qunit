@@ -1,4 +1,4 @@
-Copyright 2013-2015 TDD BaseCamp and other contributors
+Copyright 2013- TDD BaseCamp and other contributors
 http://devtesting.jp/tddbc/
 https://github.com/tddbc
 
